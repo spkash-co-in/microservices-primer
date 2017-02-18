@@ -1,0 +1,7 @@
+server:
+  port: 8282
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:9000/eureka/

@@ -1,0 +1,28 @@
+version: '2'
+services:
+  discovery:
+    image: spkashcoin/discovery-service:latest
+    container_name: discovery-service
+    ports:
+     - "9000:9000"
+  gateway:
+    image: spkashcoin/gateway-service:latest
+    container_name: gateway-service
+    ports:
+     - "8080:8080"
+    depends_on:
+     - discovery
+  product-service:
+    image: spkashcoin/product-service:latest
+    container_name: product-service
+    depends_on:
+     - discovery
+    ports:
+      - "8181:8181"
+  pricing-service:
+    image: spkashcoin/pricing-service:latest
+    container_name: pricing-service
+    depends_on:
+     - discovery
+    ports:
+     - "8282:8282"
