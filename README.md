@@ -2,10 +2,13 @@
 
 ***
 
-This is a demonstration of an application built with multiple collaborating microservices with service registartion and discovery. The following elements are combined together to produce a simple Product Master Data service.
+This is a demonstration of an application built with multiple collaborating microservices with service registartion and discovery. The following elements are combined together to produce a simple Product Master Data application.
 
+* Spring Cloud Netflix
 * Service Gateway - Zuul
 * Service Discovery/Registry - Eureka
+* Client Side Load Balancing - Ribbon
+* Circuit Breaker - Hystrix
 * Java Microservices with Spring Boot
 
 ![Microservices Architecture](https://github.com/spkash-co-in/microservices-primer/blob/master/microservices-arch.jpg)
